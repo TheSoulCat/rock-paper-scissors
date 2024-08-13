@@ -30,3 +30,10 @@
     - You need to recall the choice functions to get new choices for each round
 - Determine which player has a higher score at the end and declare winner.
 */
+
+
+//Get Computer Choice
+
+function getComputerChoice() {
+
+}
