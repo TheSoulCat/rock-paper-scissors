@@ -35,5 +35,16 @@
 //Get Computer Choice
 
 function getComputerChoice() {
+    let randomInt = Math.floor(Math.random() * 3);
+    //return randomInt;
 
+    const choices = ["Rock", "Paper", "Scissors"];
+    return choices[0];
 }
+
+console.log(getComputerChoice());
+
+
+
+
+
