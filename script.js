@@ -36,13 +36,28 @@
 
 function getComputerChoice() {
     let randomInt = Math.floor(Math.random() * 3);
-    //return randomInt;
 
     const choices = ["Rock", "Paper", "Scissors"];
-    return choices[0];
+
+    return choices[randomInt];
 }
 
+// Get User Choice
+
+ function getHumanChoice() {
+    let userChoice = prompt("Please enter your choice: Rock, Paper or Scissors");
+
+    if (userChoice === "Rock" || userChoice === "Paper" || userChoice === "Scissors") {
+        return userChoice;
+    } else {
+        getHumanChoice();
+    }
+ }
+
 console.log(getComputerChoice());
+
+console.log(getHumanChoice());
+
 
 
 
