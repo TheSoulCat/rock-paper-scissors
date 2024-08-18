@@ -1,12 +1,12 @@
 /* Rock, Paper, Scissors Game
 
-1. Get Computer Choice
+1. Get Computer Choice- Completed
 - Write a function that will get the computer's choice (getComputerChoice)
 - Computer will return one of the following random string values "rock", "paper", or "scissors"
 - Use the Math.random method
 - Test using console.log
 
-2. Get User Choice
+2. Get User Choice - Completed
 - Write a function that takes the user choice and returns it (getHumanChoice)
 - Use prompt to get user input and return one of the valid options "rock", "paper", or "scissors" 
 - Test using console.log
@@ -32,9 +32,12 @@
 */
 
 
+
+//Declare global variables
+let humanScore = 0;
+let computerScore = 0;
+
 //Get Computer Choice
-
-
 
 function getComputerChoice() {
     let randomInt = Math.floor(Math.random() * 3);
@@ -57,9 +60,11 @@ function getComputerChoice() {
                 userChoice = prompt("Please enter your choice: Rock, Paper, or Scissors", "Rock");
             }
         }
-
     return userChoice;
 }
+
+console.log(humanScore);
+console.log(computerScore);
 
 console.log(getComputerChoice());
 console.log(getHumanChoice());
