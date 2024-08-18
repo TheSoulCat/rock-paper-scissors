@@ -15,7 +15,7 @@
 - Create two new variable in the global scope (humanScore & computerScore)
 - Initialize both with a value of 0
 
-4. Write logic to play one round
+4. Write logic to play one round - Completed
 - Write a function that will play a round (playRound)
 - Define parameters for playRound function - (humanChoice & computerChoice)
     - Use the two parameters to take the human and computer choices as arguments
