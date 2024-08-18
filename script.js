@@ -11,7 +11,7 @@
 - Use prompt to get user input and return one of the valid options "rock", "paper", or "scissors" 
 - Test using console.log
 
-3. Declare player score variables
+3. Declare player score variables - Completed
 - Create two new variable in the global scope (humanScore & computerScore)
 - Initialize both with a value of 0
 
@@ -34,6 +34,9 @@
 
 
 //Declare global variables
+
+const humanSelection = getHumanChoice();
+const computerSelection = getComputerChoice();
 let humanScore = 0;
 let computerScore = 0;
 
@@ -47,27 +50,51 @@ function getComputerChoice() {
     return choices[randomInt];
 }
 
-// Get User Choice
+// Get Human Choice
 
  function getHumanChoice() {
     let userChoice = prompt("Please enter your choice: Rock, Paper, or Scissors", "Rock");
+    userChoice = userChoice.charAt(0).toUpperCase() + userChoice.slice(1);
 
-        if (userChoice === "Rock" || userChoice === "Paper" || userChoice === "Scissors") {
-            return userChoice;
-        } else {
             while (userChoice !== "Rock" && userChoice !== "Paper" && userChoice !== "Scissors") {
                 alert("Please enter a valid option. Try again.");
                 userChoice = prompt("Please enter your choice: Rock, Paper, or Scissors", "Rock");
+                userChoice = userChoice.charAt(0).toUpperCase() + userChoice.slice(1);
             }
-        }
+
     return userChoice;
 }
 
-console.log(humanScore);
-console.log(computerScore);
+// Play one round
 
-console.log(getComputerChoice());
-console.log(getHumanChoice());
+function playRound(humanChoice, computerChoice) {
+    if (humanChoice === computerChoice) {
+        alert("It's a tie!  Please try again!");
+        playRound(getHumanChoice(), getComputerChoice());
+
+    } else if(humanChoice === "Rock" && computerChoice === "Scissors") {
+        alert(`You Win!!! ${humanChoice} beats ${computerChoice}!`);
+
+    } else if (humanChoice === "Scissors" && computerChoice === "Paper") {
+        alert(`You Win!!! ${humanChoice} beats ${computerChoice}!`);
+
+    } else if (humanChoice === "Paper" && computerChoice === "Rock") {
+        alert(`You Win!!! ${humanChoice} beats ${computerChoice}!`);
+
+    } else {
+        alert(`You Lose!!! ${computerChoice} beats ${humanChoice}!`)
+    }
+}
+
+playRound(humanSelection, computerSelection);
+
+//console.log(humanSelection);
+//onsole.log(computerSelection);
+
+//console.log(humanScore);
+//console.log(computerScore);
+
+
 
 
 
