@@ -90,10 +90,12 @@ function playGame() {
         playRound(getHumanChoice(), getComputerChoice());
     }
 
-console.log(humanScore);
-console.log(computerScore);
+    if (humanScore > computerScore) {
+        alert(`Game Over!  You Win!!! \n \n You: ${humanScore} \n Computer: ${computerScore}`)
+    } else {
+        alert(`Game Over! You Lose... \n \n Computer: ${computerScore} \n You: ${humanScore}`)
+    }
 }
-
 
 playGame();
 
