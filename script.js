@@ -46,7 +46,7 @@ function getComputerChoice() {
 
  function getHumanChoice() {
     let userChoice = prompt("Please enter your choice: Rock, Paper, or Scissors", "Rock");
-    userChoice = userChoice.charAt(0).toUpperCase() + userChoice.slice(1);
+    userChoice = userChoice.charAt(0).toUpperCase() + userChoice.slice(1).toLowerCase();
 
         while (userChoice !== "Rock" && userChoice !== "Paper" && userChoice !== "Scissors") {
             alert("Please enter a valid option. Try again.");
