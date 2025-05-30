@@ -51,10 +51,10 @@ function playGame() {
             computerScore++;
         }
     }
-
-    for(let i = 0; i < 5; i++) {
+    // Removed logic that loops game for 5 rounds. Game now goes for 1 round.
+    //for(let i = 0; i < 5; i++) {
         playRound(getHumanChoice(), getComputerChoice());
-    }
+    //}
 
     if (humanScore > computerScore) {
         alert(`Game Over!  You Win!!! \n \n You: ${humanScore} \n Computer: ${computerScore}`)
