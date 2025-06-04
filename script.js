@@ -11,16 +11,24 @@ function getComputerChoice() {
 // Get Human Choice
 
  function getHumanChoice() {
-    let userChoice = prompt("Please enter your choice: Rock, Paper, or Scissors", "Rock");
-    userChoice = userChoice.charAt(0).toUpperCase() + userChoice.slice(1).toLowerCase();
+    const rock = document.querySelector('#rock-btn');
+    const paper = document.querySelector('#paper-btn');
+    const scissors = document.querySelector('#scissors-btn');
 
-        while (userChoice !== "Rock" && userChoice !== "Paper" && userChoice !== "Scissors") {
-            alert("Please enter a valid option. Try again.");
-            userChoice = prompt("Please enter your choice: Rock, Paper, or Scissors", "Rock");
-            userChoice = userChoice.charAt(0).toUpperCase() + userChoice.slice(1);
-        }
+    rock.addEventListener('click', () => {});
+    paper.addEventListener('click', () => {});
+    scissors.addEventListener('click', () => {});
+    
+    // let userChoice = prompt("Please enter your choice: Rock, Paper, or Scissors", "Rock");
+    // userChoice = userChoice.charAt(0).toUpperCase() + userChoice.slice(1).toLowerCase();
 
-    return userChoice;
+    //     while (userChoice !== "Rock" && userChoice !== "Paper" && userChoice !== "Scissors") {
+    //         alert("Please enter a valid option. Try again.");
+    //         userChoice = prompt("Please enter your choice: Rock, Paper, or Scissors", "Rock");
+    //         userChoice = userChoice.charAt(0).toUpperCase() + userChoice.slice(1);
+    //     }
+
+    // return userChoice;
 }
 
 // Play Game
